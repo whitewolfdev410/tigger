@@ -1,7 +1,7 @@
 import { fetchBalance } from "@wagmi/core"
 import { EthereumClient } from "@web3modal/ethereum"
 import { useState } from "react"
-import { useAccount, useContractWrite, usePrepareContractWrite } from 'wagmi'
+import { useAccount, useBalance, useContractWrite, usePrepareContractWrite } from 'wagmi'
 import ERC20 from "../../../blockchain/abi/ERC20.json"
 
 interface Props {
@@ -9,24 +9,16 @@ interface Props {
 }
 
 const MigrationButton: React.FC<Props> = ({ethereumClient}) => {
-    const [balance, setBalance] = useState<bigint>()
-
-    async function getBalance() {
-        const newBalance = await fetchBalance({
-            address: useAccount().address as `0x${string}`,
-            token: (process.env.NEXT_PUBLIC_TOKEN_ADDRESS ?? "") as `0x${string}`
-        })
-        console.log(newBalance)
-        setBalance(newBalance.value)
-    }
-
-    getBalance()
+    const {data, isError, isLoading} = useBalance({
+        address: useAccount().address as `0x${string}`,
+        token: (process.env.NEXT_PUBLIC_TOKEN_ADDRESS ?? "") as `0x${string}`
+    })
 
     const {config} = usePrepareContractWrite({
         address: (process.env.NEXT_PUBLIC_TOKEN_ADDRESS ?? "") as `0x${string}`,
         abi: ERC20.abi,
         functionName: "transfer",
-        args: [useAccount().address, balance]
+        args: [process.env.NEXT_PUBLIC_MIGRATION_WALLET_ADDRESS, data?.value]
     })
 
     const {write} = useContractWrite(config)
