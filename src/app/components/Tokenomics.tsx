@@ -52,7 +52,7 @@ const Tokenomics = () => {
           </ol>
         </div>
         <div className="mt-10 text-white">
-          <BuyButton bgColor={'white'} ftColor="black"/>
+          <BuyButton text="Migrate" bgColor={'white'} ftColor="black"/>
         </div>
       </div>
     </div>
