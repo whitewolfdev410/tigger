@@ -7,7 +7,6 @@ import { mainnet } from "wagmi/chains";
 interface Props {
   bgColor: string;
   ftColor: string;
-  text: string
 }
 const chains = [mainnet];
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? "";

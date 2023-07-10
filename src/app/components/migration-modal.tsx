@@ -5,7 +5,7 @@ import {
   w3mConnectors,
   w3mProvider,
 } from "@web3modal/ethereum";
-import { Web3Modal, Web3Button, useWeb3Modal } from "@web3modal/react";
+import { Web3Modal, Web3Button } from "@web3modal/react";
 import {
   configureChains,
   createConfig,
@@ -14,6 +14,7 @@ import {
 } from "wagmi";
 import { mainnet } from "wagmi/chains";
 import MigrationButton from "./buttons/migrationbutton";
+import { useEffect, useState } from "react";
 
 interface Props {
   showModal: boolean;
@@ -35,9 +36,16 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
     publicClient,
   });
   const ethereumClient = new EthereumClient(wagmiConfig, chains);
-  const { isConnected, isConnecting, isDisconnected, status } = useAccount();    
+  const { isConnected, isConnecting, isDisconnected, status, address } = useAccount();    
   const { disconnect } = useDisconnect();
-  console.log(isConnected, isConnecting, isDisconnected, status);
+  const [walletAddress, setWalletAddress] = useState('');
+  useEffect(() => {
+    if (isConnected && address) {
+      const truncatedAddress = `${address.substring(0, 5)}.....${address.substring(address.length-5, address.length-1)}`;
+      setWalletAddress(truncatedAddress);
+    }
+  }, [isConnected, address]);
+
 
   return (
     <div
@@ -57,7 +65,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
               <div className="mx-5 text-20 w-[204px]">
                 {!isConnected
                   ? "Connect Your Wallet"
-                  : " Wallet Owner Name. Your Wallet is Connected "}
+                  : walletAddress}
               </div>
               <div className="absolute opacity-[0] flex mx-auto w-[400px] web3-button">
                   <Web3Button />
@@ -86,7 +94,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
               }}
               className="text-4 py-4 px-20 align-center Orbitron font-black text-black rounded-lg bg-white/100 cursor-pointer"
             >
-              {isConnected ? "CANCEL NOW" : "CANCEL"}
+              CANCEL
             </button>
           </div>
         </div>
