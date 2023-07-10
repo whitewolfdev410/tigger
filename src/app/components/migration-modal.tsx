@@ -4,7 +4,6 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { Web3Modal, Web3Button } from '@web3modal/react'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import { mainnet } from 'wagmi/chains'
-import { useState } from 'react';
 import MigrationButton from './buttons/migrationbutton';
 
 const chains = [mainnet]
@@ -19,11 +18,10 @@ const wagmiConfig = createConfig({
 const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
 interface Props {
-    showModal:boolean
     setShowModal: (showModal: boolean) => void
 }
 
-const MigrationModal: React.FC<Props> = ({showModal, setShowModal}) => {
+const MigrationModal: React.FC<Props> = ({setShowModal}) => {
     return (
         <div className={`${!showModal&&'hidden'} fixed top-0 left-0 w-[100vw] h-[100vh] flex bg-black/20 backdrop-blur-md`}>
             <WagmiConfig config={wagmiConfig}>
