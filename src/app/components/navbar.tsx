@@ -16,7 +16,7 @@ const Navbar = () => {
           Home
         </p>
         <p className="my-auto ml-auto hover:text-white/100 px-20 text-xl text-white/60 cursor-pointer uppercase">
-          Tocenomics
+          Tokenomics
         </p>
         <p className="my-auto ml-auto hover:text-white/100  text-xl text-white/60 cursor-pointer uppercase">
           Whiteprper
