@@ -13,6 +13,10 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+#shadow-root {
+  background-color: transparent!important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -40,3 +44,7 @@ body {
 .Orbitron{
   font-family: 'Orbitron';
 }
+
+/* w3m-button-big #shadow-root button.open{
+  background-color: transparent !important;
+} */

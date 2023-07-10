@@ -4,8 +4,11 @@ import { useState } from "react"
 import { useAccount, useBalance, useContractWrite, usePrepareContractWrite } from 'wagmi'
 import ERC20 from "../../../blockchain/abi/ERC20.json"
 
+interface Props {
+    ethereumClient: EthereumClient
+}
 
-const MigrationButton = () => {
+const Buybutton: React.FC<Props> = ({ethereumClient}) => {
     const {data, isError, isLoading} = useBalance({
         address: useAccount().address as `0x${string}`,
         token: (process.env.NEXT_PUBLIC_TOKEN_ADDRESS ?? "") as `0x${string}`
@@ -21,10 +24,10 @@ const MigrationButton = () => {
     const {write} = useContractWrite(config)
 
     return (
-        <button onClick={()=>{write?.()}} className="bg-gradient-to-r from-[#FE8C00] to-[#F83600]  rounded px-5 py-2 w-[240px] h-[56px] text-4 hover:bg-[#479ffd] mt-auto uppercase Orbitron">
-            Migrate Now
+        <button onClick={()=>{write?.()}} className="bg-[#3396FF] rounded px-5 py-2 transition-all hover:bg-[#479ffd] mt-auto">
+            Migrate
         </button>
     )
 }
 
-export default MigrationButton
+export default Buybutton
