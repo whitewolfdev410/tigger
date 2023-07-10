@@ -18,7 +18,7 @@ const BuyButton: React.FC<Props> = ({ bgColor, ftColor, text }) => {
       >
         {text}
       </button>
-      {showModal && <MigrationModal setShowModal={setShowModal} />}
+      {showModal && <MigrationModal showModal={showModal} setShowModal={setShowModal} />}
     </>
   );
 };
