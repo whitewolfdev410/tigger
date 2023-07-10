@@ -27,7 +27,7 @@ const Navbar = () => {
           contact us
         </span>
       </div>
-      {showModal && <MigrationModal setShowModal={setShowModal} />}
+      {showModal && <MigrationModal showModal={showModal} setShowModal={setShowModal} />}
     </div>
   );
 };

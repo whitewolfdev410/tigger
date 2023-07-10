@@ -92,8 +92,9 @@ const Content = () => {
             <BuyButton
               bgColor="gradient-to-r from-[#FE8C00] to-[#F83600]"
               ftColor="white"
+              text="Claim"
             />
-            <BuyButton bgColor="white" ftColor="black" />
+            <BuyButton bgColor="white" ftColor="black" text="Migrate"/>
           </div>
         </div>
       </div>
