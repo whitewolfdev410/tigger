@@ -12,22 +12,22 @@ const Navbar = () => {
         <img src="/image/logo 1.png" />
       </div>
       <div className="flex">
-        <p className="my-auto ml-auto pointer-events-auto text-xl text-gray-400 hover:text-white/100 cursor-pointer uppercase">
+        <a className="my-auto ml-auto pointer-events-auto text-xl text-gray-400 hover:text-white/100 active:border-x-white-400 cursor-pointer uppercase">
           Home
-        </p>
-        <p className="my-auto ml-auto hover:text-white/100 px-20 text-xl text-white/60 cursor-pointer uppercase">
+        </a>
+        <a className="my-auto ml-auto hover:text-white/100 px-20 text-xl text-white/60 cursor-pointer uppercase">
           Tocenomics
-        </p>
-        <p className="my-auto ml-auto hover:text-white/100  text-xl text-white/60 cursor-pointer uppercase">
+        </a>
+        <a className="my-auto ml-auto hover:text-white/100  text-xl text-white/60 cursor-pointer uppercase">
           Whiteprper
-        </p>
+        </a>
       </div>
       <div>
         <span className="px-6 bg-white/[16%] items-center flex h-12 rounded-lg my-auto ml-auto text-xl text-white cursor-pointer uppercase">
           contact us
         </span>
       </div>
-      {showModal && <MigrationModal setShowModal={setShowModal} />}
+      {showModal && <MigrationModal showModal={true} setShowModal={setShowModal} />}
     </div>
   );
 };
