@@ -19,16 +19,17 @@ const wagmiConfig = createConfig({
 const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
 interface Props {
+    showModal:boolean
     setShowModal: (showModal: boolean) => void
 }
 
-const MigrationModal: React.FC<Props> = ({setShowModal}) => {
+const MigrationModal: React.FC<Props> = ({showModal, setShowModal}) => {
     return (
-        <div className="absolute top-0 left-0 w-[100vw] h-[100vh] flex bg-black/20 backdrop-blur-md">
+        <div className={`${!showModal&&'hidden'} fixed top-0 left-0 w-[100vw] h-[100vh] flex bg-black/20 backdrop-blur-md`}>
             <WagmiConfig config={wagmiConfig}>
-                <div className="m-auto bg-white rounded-lg shadow-lg w-[40vh] h-[50vh] flex flex-col p-5">
+                <div className="m-auto bg-white rounded-lg text-4 shadow-lg w-[40vh] h-[50vh] flex flex-col">
                     <Web3Modal projectId={projectId} ethereumClient={ethereumClient}/>
-                    <p onClick={()=>{setShowModal(false)}} className="text-black text-xl text-right cursor-pointer">x</p>
+                    <p onClick={()=>{setShowModal(false)}} className="text-black text-[40px] mr-3 text-right cursor-pointer">x</p>
                     <p className="text-black text-center text-lg mb-10">Migrate Tokens</p>
 
                     <div className="mx-auto">
