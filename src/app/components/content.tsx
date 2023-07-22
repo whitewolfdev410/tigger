@@ -89,8 +89,7 @@ const Content = () => {
             </p>
           </div>
           <div className="flex justify-center mt-7">
-            <BuyButton  bgColor="gradient-to-r from-[#FE8C00] to-[#F83600]" ftColor="white" text="Buy on Uniswap"/>
-            <BuyButton  bgColor="gradient-to-r from-[#FFFFFF] to-[#FFFFFF]" ftColor="black" text="Migrate Now"/>
+            <BuyButton bgColor="gradient-to-r from-[#FE8C00] to-[#F83600]" ftColor="white" text="Migrate Now"/>
           </div>
         </div>
       </div>

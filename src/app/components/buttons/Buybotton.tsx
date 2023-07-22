@@ -21,12 +21,12 @@ const BuyButton: React.FC<Props> = ({ bgColor, ftColor, text }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div
+      <button
         className={`bg-${bgColor} !important text-center px-[30px] text-base text-${ftColor} Orbitron px-[30px] font-black py-4 rounded-lg uppercase m-3`}
         onClick={() => setShowModal(true)}
       >
         {text}
-      </div>
+      </button>
       <WagmiConfig config={wagmiConfig}>
         {showModal && (
           <MigrationModal showModal={showModal} setShowModal={setShowModal} />

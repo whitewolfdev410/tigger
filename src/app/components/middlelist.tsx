@@ -39,12 +39,12 @@ const Middlelist = () => {
               fill="white"
             />
           </svg>
-          Twitther
+          Twitter
         </p>
       </div>
       <div>
         <span className="px-6 bg-white/20 py-2 items-center flex rounded-lg my-auto ml-auto text-base Orbitron text-white cursor-pointer uppercase">
-          CA: 0xc58a9c076B45D219FA6632882F708DE090178897
+          CA: {process.env.NEXT_PUBLIC_TOKEN_ADDRESS}
         </span>
       </div>
     </div>
