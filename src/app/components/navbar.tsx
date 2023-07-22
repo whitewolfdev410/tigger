@@ -16,15 +16,15 @@ const Navbar = () => {
           Home
         </a>
         <a className="my-auto ml-auto hover:text-white/100 px-20 text-xl text-white/60 cursor-pointer uppercase">
-          Tocenomics
+          Tokenomics
         </a>
         <a className="my-auto ml-auto hover:text-white/100  text-xl text-white/60 cursor-pointer uppercase">
-          Whiteprper
+          Whitepaper
         </a>
       </div>
       <div>
         <span className="px-6 bg-white/[16%] items-center flex h-12 rounded-lg my-auto ml-auto text-xl text-white cursor-pointer uppercase">
-          contact us
+          Contact Us
         </span>
       </div>
       {showModal && <MigrationModal showModal={showModal} setShowModal={setShowModal} />}
