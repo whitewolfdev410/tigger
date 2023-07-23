@@ -53,12 +53,12 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
         !showModal && "hidden"
       } fixed top-0 left-0 w-[100vw] h-[100vh] flex bg-black/20 backdrop-blur-md`}
     >
-      <div className="m-auto rounded-lg text-4 w-[840px] h-[488px] flex flex-col bg-[url(/image/migration-modal-bg.png)] ">
+      <div className="m-auto rounded-lg text-4 md:w-[840px] w-screen md:h-[488px] flex flex-col bg-[url(/image/migration-modal-bg.png)] ">
         <Web3Modal projectId={projectId} ethereumClient={ethereumClient}  />
         <p className="relative text-white text-center text-5xl font-medium Orbitron mt-[60px]">
           Migrate Your Tokens
         </p>
-        <div className="w-[680px] h-[132px] mt-[8%] bg-[#FFFFFF]/10 m-auto rounded-2xl">
+        <div className="md:w-[680px] h-[132px] mt-[8%] bg-[#FFFFFF]/10 m-auto rounded-2xl">
           <div className="flex items-center justify-between px-9 py-9">
             <div className="relative flex items-center">
               <img src="/image/connect-modal-icon.png" />
@@ -67,7 +67,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
                   ? "Connect Your Wallet"
                   : walletAddress}
               </div>
-              <div className="absolute opacity-[0] flex mx-auto w-[400px] web3-button">
+              <div className="absolute opacity-[0] flex mx-auto md:w-[400px] web3-button">
                   <Web3Button />
               </div>
             </div>
@@ -83,7 +83,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
             )}
           </div>
         </div>
-        <div className="flex w-[70%] mb-[60px] m-auto justify-between">
+        <div className="flex w-[70%] mb-[60px] md:m-auto justify-between gap-5 md:gap-0 mx-auto mt-10 md:mt-0">
           <div>
             <MigrationButton />
           </div>
@@ -92,7 +92,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
               onClick={() => {
                 setShowModal(false);
               }}
-              className="text-4 py-4 px-20 align-center Orbitron font-black text-black rounded-lg bg-white/100 cursor-pointer"
+              className="text-4 py-4 px-5 md:px-20 align-center Orbitron font-black text-black rounded-lg bg-white/100 cursor-pointer"
             >
               CANCEL
             </button>

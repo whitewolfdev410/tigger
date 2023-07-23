@@ -10,7 +10,7 @@ import Content from "../components/content";
 const Home:React.FC = () => {
   return (
     <div>
-        <div className="flex min-h-screen flex-col xl:items-center xl:justify-between hero pb-4 bg-[url('/image/BGbg.png')]">
+        <div className="flex min-h-screen flex-col xl:items-center xl:justify-between hero pb-4 md:bg-[url('/image/BGbg.png')]">
           <Navbar />
           <Content />
           <Middlelist />

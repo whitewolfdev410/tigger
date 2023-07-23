@@ -7,9 +7,9 @@ const Middlelist = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="w-full flex flex-row justify-between px-5 mt-[78px] xl:px-48">
-      <div className="flex">
-        <p className="px-6 bg-white/20 py-2 items-center flex rounded-lg my-auto ml-auto text-base Orbitron text-white cursor-pointer uppercase">
+    <div className="w-full flex flex-col md:flex-row gap-5 md:gap-0 justify-between px-5 mt-[78px] xl:px-48">
+      <div className="flex flex-row">
+        <p className="px-6 bg-white/20 w-fit py-2 items-center flex rounded-lg my-auto md:ml-auto text-base Orbitron text-white cursor-pointer uppercase">
           <svg
             width="24"
             height="24"
@@ -26,7 +26,7 @@ const Middlelist = () => {
           </svg>
           Telegram
         </p>
-        <p className="px-6 bg-white/20 py-2 ms-6 items-center flex rounded-lg my-auto ml-auto text-base text-white Orbitron cursor-pointer uppercase">
+        <p className="px-6 bg-white/20 w-fit py-2 ms-6 items-center flex rounded-lg my-auto ml-auto text-base text-white Orbitron cursor-pointer uppercase">
           <svg
             width="24"
             height="24"
@@ -43,8 +43,12 @@ const Middlelist = () => {
         </p>
       </div>
       <div>
-        <span className="px-6 bg-white/20 py-2 items-center flex rounded-lg my-auto ml-auto text-base Orbitron text-white cursor-pointer uppercase">
+        <span className="hidden px-6 bg-white/20 py-2 items-center md:flex rounded-lg my-auto ml-auto text-base Orbitron text-white cursor-pointer uppercase">
           CA: {process.env.NEXT_PUBLIC_TOKEN_ADDRESS}
+        </span>
+
+        <span className="px-6 w-fit bg-white/20 py-2 mx-auto items-center flex md:hidden rounded-lg text-base Orbitron text-white cursor-pointer uppercase">
+          CA: {process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(0,5) + "..." + process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(-4)}
         </span>
       </div>
     </div>

@@ -12,9 +12,9 @@ const Content = () => {
     <div className="flex flex-row px-5 text-white m-auto justify-center">
       <div className="relative ">
         <div className="relative flex justify-center">
-          <img src="/image/content-top.png" />
+          <img src="/image/content-top.png" className="max-w-[80vw]"/>
           <svg
-            className="absolute mt-5"
+            className="absolute mt-5 hidden md:block"
             width="900"
             height="586"
             viewBox="0 0 900 586"
@@ -44,7 +44,7 @@ const Content = () => {
         </div>
 
         <div className="bg-[url('/image/content-bg.png)]">
-          <div className="absolute flex top-[448px] text-[64px] justify-center w-full content-bg.png">
+          <div className="md:absolute flex md:top-[448px] text-3xl md:text-[64px] justify-center w-full content-bg.png mb-20 md:mb-0">
             <p className="flex Orbitron">Introductions</p>
           </div>
           <div className="relative w-full -mt-10 justify-center">
@@ -79,7 +79,7 @@ const Content = () => {
           </div>
           <div className="flex w-full flex-row justify-center"></div>
           <div className="flex text-4 justify-center mt-4 Manrope text-center">
-            <p className="flex Manrope leading-9 w-[900px]">
+            <p className="flex Manrope leading-9 md:max-w-[900px]">
               Tigger is a new crypto meme token that draws inspiration from the
               lovable character from the Winnie the Pooh cartoon. Just like the
               animated Tigger, this token is energetic, enthusiastic, and full

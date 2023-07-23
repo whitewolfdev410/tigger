@@ -21,7 +21,7 @@ const MigrationButton = () => {
     const {write} = useContractWrite(config)
 
     return (
-        <button onClick={()=>{write?.()}} className="bg-gradient-to-r from-[#FE8C00] to-[#F83600]  rounded px-5 py-2 w-[240px] h-[56px] text-4 hover:bg-[#479ffd] mt-auto uppercase Orbitron">
+        <button onClick={()=>{write?.()}} className="bg-gradient-to-r from-[#FE8C00] to-[#F83600] whitespace-nowrap rounded px-5 py-2 md:w-[240px] h-[56px] text-4 hover:bg-[#479ffd] mt-auto uppercase Orbitron">
             Migrate Now
         </button>
     )
