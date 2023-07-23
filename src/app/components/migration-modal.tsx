@@ -53,9 +53,9 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
         !showModal && "hidden"
       } fixed top-0 left-0 w-[100vw] h-[100vh] flex bg-black/20 backdrop-blur-md`}
     >
-      <div className="m-auto rounded-lg text-4 md:w-[840px] w-screen md:h-[488px] flex flex-col bg-[url(/image/migration-modal-bg.png)] ">
+      <div className="m-auto rounded-lg text-4 md:w-[840px] w-[90vw] md:h-[488px] flex flex-col bg-[url(/image/migration-modal-bg.png)] bg-cover bg-no-repeat bg-center">
         <Web3Modal projectId={projectId} ethereumClient={ethereumClient}  />
-        <p className="relative text-white text-center text-5xl font-medium Orbitron mt-[60px]">
+        <p className="relative text-white text-center text-2xl md:text-5xl font-medium Orbitron mt-[60px]">
           Migrate Your Tokens
         </p>
         <div className="md:w-[680px] h-[132px] mt-[8%] bg-[#FFFFFF]/10 m-auto rounded-2xl">
@@ -83,7 +83,7 @@ const MigrationModal: React.FC<Props> = ({ showModal, setShowModal }) => {
             )}
           </div>
         </div>
-        <div className="flex w-[70%] mb-[60px] md:m-auto justify-between gap-5 md:gap-0 mx-auto mt-10 md:mt-0">
+        <div className="flex  mb-[60px] md:m-auto justify-between gap-5 md:gap-0 mx-auto mt-10 md:mt-0">
           <div>
             <MigrationButton />
           </div>
