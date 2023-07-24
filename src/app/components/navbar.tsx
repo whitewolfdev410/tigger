@@ -15,10 +15,10 @@ const Navbar = () => {
         <a className="my-auto ml-auto pointer-events-auto text-sm xl:text-xl text-gray-400 hover:text-white/100 active:border-x-white-400 cursor-pointer uppercase">
           Home
         </a>
-        <a className="my-auto ml-auto hover:text-white/100 px-20 text-sm xl:text-xl text-white/60 cursor-pointer uppercase">
-          Tokenomics
+        <a href="https://drive.google.com/file/d/1cTWmsomgZR0Bgf0ozpeE0osrKQMW4QAx/view?usp=sharing" className="my-auto ml-auto hover:text-white/100 px-20 text-sm xl:text-xl text-white/60 cursor-pointer uppercase">
+          Roadmap
         </a>
-        <a className="my-auto ml-auto hover:text-white/100 text-sm xl:text-xl text-white/60 cursor-pointer uppercase">
+        <a href="https://drive.google.com/file/d/1m4-t7OBDZxS_eRqguGtluuDXGmaYK5-V/view?usp=sharing" className="my-auto ml-auto hover:text-white/100 text-sm xl:text-xl text-white/60 cursor-pointer uppercase">
           Whitepaper
         </a>
       </div>
