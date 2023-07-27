@@ -9,14 +9,13 @@ const Middlelist = () => {
   return (
     <div className="w-full flex flex-col md:flex-row gap-5 md:gap-0 justify-between px-5 mt-[78px] xl:px-48">
       <div className="flex flex-row">
-        <p className="px-6 bg-white/20 w-fit py-2 items-center flex rounded-lg my-auto md:ml-auto text-base Orbitron text-white cursor-pointer uppercase">
+        <p className="pr-6 pl-4 md:px-6 bg-white/20 w-fit py-2 items-center flex rounded-lg my-auto md:ml-auto text-base Orbitron text-white cursor-pointer uppercase">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -26,14 +25,13 @@ const Middlelist = () => {
           </svg>
           Telegram
         </p>
-        <p className="px-6 bg-white/20 w-fit py-2 ms-6 items-center flex rounded-lg my-auto ml-auto text-base text-white Orbitron cursor-pointer uppercase">
+        <p className="pr-6 pl-4 md:px-6 bg-white/20 w-fit py-2 ms-6 items-center flex rounded-lg my-auto ml-auto text-base text-white Orbitron cursor-pointer uppercase">
           <svg
             width="24"
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M20.9826 6.18877C21.0361 6.10939 20.9571 6.00691 20.8715 6.04221C20.2637 6.29313 19.6283 6.46242 18.9803 6.54585C19.7019 6.0868 20.2587 5.388 20.5674 4.56068C20.5989 4.4764 20.5125 4.40114 20.4379 4.44498C19.7673 4.83939 19.044 5.12339 18.2927 5.28695C18.2613 5.2938 18.2288 5.2824 18.2068 5.25759C17.6429 4.62405 16.9008 4.20223 16.0917 4.05646C15.2656 3.90763 14.4165 4.05499 13.6776 4.47543C12.9386 4.89587 12.3516 5.56561 12.0086 6.37961C11.6825 7.15357 11.5945 8.01631 11.7553 8.84488C11.7678 8.90917 11.7206 8.96986 11.659 8.96579C10.1972 8.86911 8.76897 8.45505 7.46225 7.74857C6.15884 7.04389 5.00464 6.06356 4.06994 4.86804C4.02846 4.81498 3.94984 4.82185 3.91961 4.88293C3.62877 5.47066 3.47649 6.12574 3.4769 6.79153C3.47572 7.45427 3.62844 8.10703 3.92147 8.6917C4.21451 9.27637 4.63875 9.77481 5.15644 10.1426C4.60743 10.1267 4.06912 9.98219 3.57956 9.72013C3.51647 9.68636 3.44079 9.73445 3.44408 9.80956C3.48225 10.6834 3.78351 11.5607 4.30496 12.2338C4.85987 12.9501 5.63008 13.4403 6.4853 13.6215C6.15609 13.7282 5.81429 13.7844 5.4702 13.7886C5.28292 13.7862 5.096 13.7715 4.91054 13.7445C4.84177 13.7345 4.78562 13.8041 4.80969 13.8734C5.06477 14.608 5.51541 15.2489 6.10793 15.7168C6.74141 16.217 7.50555 16.4945 8.29403 16.5107C6.96258 17.6264 5.31874 18.2352 3.62455 18.2403C3.45047 18.2409 3.27646 18.2349 3.10286 18.2223C3.00504 18.2152 2.96005 18.354 3.04437 18.4073C4.69508 19.4505 6.58181 20.0019 8.50628 19.9994C9.92714 20.0151 11.3367 19.7292 12.6526 19.1583C13.9685 18.5873 15.1645 17.7429 16.1705 16.6743C17.1765 15.6057 17.9725 14.3343 18.512 12.9345C19.0515 11.5346 19.3236 10.0343 19.3125 8.52113V8.04959C19.3125 8.01857 19.3263 7.98939 19.3496 7.97069C19.9755 7.4674 20.5259 6.86652 20.9826 6.18877Z"
               fill="white"
@@ -48,7 +46,10 @@ const Middlelist = () => {
         </span>
 
         <span className="px-6 w-fit bg-white/20 py-2 mx-auto items-center flex md:hidden rounded-lg text-base Orbitron text-white cursor-pointer uppercase">
-          CA: {process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(0,5) + "..." + process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(-4)}
+          CA:{" "}
+          {process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(0, 5) +
+            "..." +
+            process.env.NEXT_PUBLIC_TOKEN_ADDRESS?.slice(-4)}
         </span>
       </div>
     </div>
